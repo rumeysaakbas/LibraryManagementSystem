@@ -1,0 +1,27 @@
+*{
+    background-color:#899bb1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form>input{
+    background-color:rgba(255, 255, 255, 0.5);
+    width:300px;
+    height:35px;
+}
+form>input:hover{
+    background-color:white;
+    opacity:0.8;
+}
+button{
+    background-color:white;
+    color:black;
+    width:300px;
+    height:35px;
+    font-size:18px;
+}
+form>input:focus{
+    background-color:white;
+}
+::placeholder{
+    color:rgb(59, 56, 56);;
+}
+
