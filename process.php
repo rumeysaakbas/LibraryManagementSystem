@@ -182,18 +182,19 @@ if(isset($_GET['process'])){
 
         //// giriş işlemi ////
         case 'login':
-            $user=($_POST["name"]);
+            $email=($_POST["email"]);
             $password=($_POST['password']);
 
             $target='index.php';
 
-            $prepare=$db->prepare("SELECT password FROM users WHERE name=?;");
-            $prepare->execute(array("$user"));
+            $prepare=$db->prepare("SELECT password, name FROM users WHERE email=?;");
+            $prepare->execute(array("$email"));
             if($prepare->rowCount()){
                 $result=$prepare->fetch();
                 $user_password = $result["password"];
+                $user_name = $result["name"];
                 if($user_password==$password){
-                    $_SESSION['user']=$user;
+                    $_SESSION['user']=$user_name;
                     $title='Giriş Yaptınız';
                     $icon='success';
                     $target='home.php';
