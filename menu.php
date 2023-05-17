@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <ul class="nav" style="background-color:rgb(48,48,48);">
+    <ul class="nav d-flex align-items-center" style="background-color:rgb(48,48,48); height:57px;">
         <li class="nav-item">
             <a class="nav-link text-white ms-3" aria-current="page" href="home.php">ANA SAYFA</a>
         </li>
@@ -30,11 +30,10 @@
         <div class="vr text-white"></div>
         <li class="nav-item">
             <a class="nav-link text-white" href="member_list.php">Üye Listesi</a>
-        </li>
+        </li>        
         <li class="nav-item position-absolute top-0 end-0">
-            <a class="nav-link text-white" type="button" href="process.php?process=exit" ><?php echo $_SESSION['user']; ?> <div class="vr">  </div> Çıkış </a>
+            <a class="nav-link text-white mt-2" type="button" href="process.php?process=exit" ><?php echo $_SESSION['user']; ?> | Çıkış </a>
         </li>
-
     </ul>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
